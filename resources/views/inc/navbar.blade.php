@@ -1,9 +1,17 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
     <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
+            @guest
             <li class="nav-item active">
-                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/">Strona główna <span class="sr-only">(current)</span></a>
             </li>
+            @endguest
+
+            @auth
+                 <li class="nav-item active">
+                    <a class="nav-link" href="/dashboard">Strona główna <span class="sr-only">(current)</span></a>
+                 </li>
+            @endauth
             <li class="nav-item">
                 <a class="nav-link" href="/services">Services</a>
             </li>
@@ -28,11 +36,11 @@
                 <!-- Authentication Links -->
                 @guest
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                        <a class="nav-link" href="{{ route('login') }}">{{ __('Logowanie') }}</a>
                     </li>
                     <li class="nav-item">
                         @if (Route::has('register'))
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            <a class="nav-link" href="{{ route('register') }}">{{ __('Rejestracja') }}</a>
                         @endif
                     </li>
                 @else
