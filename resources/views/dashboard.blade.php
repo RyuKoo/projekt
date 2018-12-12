@@ -5,10 +5,9 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header">Kokpit</div>
 
                 <div class="card-body">
-                    <a href="/posts/create" class="btn btn-primary"> Stwórz post </a> <br>
                     <h3> Twoje posty </h3>
                         @if(count($posts) > 0)
                             <table class="table table-striped">
@@ -30,6 +29,7 @@
                                 </tr>
                             @endforeach
                             </table>
+                        <a href="/posts/create" class="btn btn-primary"> Stwórz post </a> <br>
                         @else
                             <p> Nie masz postów </p>
                         @endif

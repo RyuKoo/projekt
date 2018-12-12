@@ -21,7 +21,7 @@ define('LARAVEL_START', microtime(true));
 |
 */
 
-require __DIR__.'/../vendor/autoload.php';
+require 'F:/xampp/htdocs/projekt/vendor/autoload.php';
 
 /*
 |--------------------------------------------------------------------------
